@@ -17,8 +17,10 @@ class Model {
           INSERT INTO ${this.table}(${columns})
           VALUES (${values})
           RETURNING id, ${columns}`;
+          console.log(query)
     return this.pool.query(query);
   }
+
 }
 
 export default Model;
